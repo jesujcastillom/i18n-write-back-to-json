@@ -1,0 +1,19 @@
+{
+  "name": "i18n-write-back-to-json",
+  "version": "1.0.0",
+  "description": "Write from xlsx array back to json ordered keys",
+  "main": "index.js",
+  "scripts": {},
+  "bin": "i18n-write-back",
+  "author": "Jesu Castillo",
+  "license": "MIT",
+  "dependencies": {
+    "i18n-webpack-plugin-generate-json": "github:jesujcastillom/i18n-webpack-plugin-generate-json",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "xlsx": "^0.11.5"
+  },
+  "devDependencies": {
+    "glob": "^7.1.2"
+  }
+}
