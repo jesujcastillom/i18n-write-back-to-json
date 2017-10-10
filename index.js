@@ -13,7 +13,7 @@ var outputFilename = argv.f || argv.filename;
 var outputDirectory = argv.o || argv.output;
 
 console.log("Reading from: " + filename);
-var file = readFileFn(filename);
+var file = readFileFn(path.join(__dirname,filename));
 var workSheet = file.Sheets[sheet];
 var result = readCellArray(workSheet, "B1", "E1000", languages);
 
