@@ -3,19 +3,29 @@
   "version": "1.0.4",
   "description": "Write from xlsx array back to json ordered keys",
   "main": "index.js",
-  "scripts": {},
   "bin": {
-    "i18n-write-back": "index.js"
+    "i18n-write-back": "dist/main.min.js"
+  },
+  "scripts": {
+    "build": "webpack",
+    "prepublish": "webpack"
   },
   "author": "Jesu Castillo",
   "license": "MIT",
   "dependencies": {
+    "fs": "0.0.1-security",
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
     "xlsx": "^0.11.5"
   },
   "devDependencies": {
-    "glob": "^7.1.2"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "glob": "^7.1.2",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "webpack": "^3.6.0"
   },
   "repository": {
     "url": "https://github.com/jesujcastillom/i18n-write-back-to-json.git"

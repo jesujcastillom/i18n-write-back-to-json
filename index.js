@@ -1,9 +1,8 @@
-var readFileFn = require("./src/file-handler").readFile;
-var readCellArray = require("./src/file-handler").readFromCellAsArray;
-var path = require("path");
-var minimist = require("minimist");
-var _ = require("lodash");
-var fs = require("fs");
+import {readFile,readFromCellAsArray} from "./src/file-handler";
+import path from "path";
+import minimist from "minimist";
+import _ from "lodash";
+import fs from "fs";
 
 var argv = minimist(process.argv.slice(2));
 var filename = argv.i || argv.input;
@@ -13,7 +12,7 @@ var outputFilename = argv.f || argv.filename;
 var outputDirectory = argv.o || argv.output;
 
 console.log("Reading from: " + filename);
-var file = readFileFn(path.join(__dirname,filename));
+var file = readFileFn(filename);
 var workSheet = file.Sheets[sheet];
 var result = readCellArray(workSheet, "B1", "E1000", languages);
 
