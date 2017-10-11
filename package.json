@@ -1,6 +1,6 @@
 {
   "name": "i18n-write-back-to-json",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Write from xlsx array back to json ordered keys",
   "main": "index.js",
   "bin": {
